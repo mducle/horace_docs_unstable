@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Interfacing with other programs &mdash; Horace 3.6.1.3fa7013d3 documentation</title>
+  <title>Interfacing with other programs &mdash; Horace 3.6.1.e342142ef documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -32,7 +32,7 @@
             <img src="../_static/150px-Quintus_Horatius_Flaccus.jpg" class="logo" alt="Logo"/>
           </a>
               <div class="version">
-                3.6.1.3fa7013d3
+                3.6.1.e342142ef
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
@@ -221,13 +221,14 @@ then clicking “Add-Ons” and “Get Add-Ons”:</p>
 and to tell Matlab about this.
 Please see <a class="reference external" href="https://horace-euphonic-interface.readthedocs.io/en/latest/#set-up-python-in-matlab">here</a>
 for more detailed information.</p>
-<p>If you haven’t installed the <cite>Euphonic</cite> Python package (using <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">euphonic</span></code>)
-then you can do this within Horace using:</p>
-<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">euphonic</span><span class="p">.</span><span class="n">install_python_modules</span>
+<p>If you haven’t installed the <cite>Euphonic</cite> Python package then you can do this within Horace using:</p>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">euphonic</span><span class="p">.</span><span class="n">install_python_modules</span><span class="p">()</span>
 </pre></div>
 </div>
-<p>This may not work for all Python distributions, in which you should use <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">euphonic</span></code>
-in the Python command line.</p>
+<p>This may not work for all Python distributions, in which case you should install Euphonic manually.
+Euphonic can be installed with <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">euphonic</span></code> in the Python command line,
+but there are also other ways of installing Euphonic, which are detailed in the
+<a class="reference external" href="https://euphonic.readthedocs.io/en/stable/installation.html">Euphonic installation instructions</a>.</p>
 <p>On the <a class="reference external" href="https://isis.analysis.stfc.ac.uk/">IDAaaS system</a>, you can access the pre-installed
 Euphonic Python environment using:</p>
 <div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">pyenv</span><span class="p">(</span><span class="s">&#39;Version&#39;</span><span class="p">,</span> <span class="s">&#39;/usr/local/virtualenvs/euphonicenv/bin/python3&#39;</span><span class="p">);</span>
@@ -301,14 +302,18 @@ Higher values will yield a more accurate calculation but the <span class="math n
 <li><p>The <code class="docutils literal notranslate"><span class="pre">temperature</span></code> is in Kelvin.</p></li>
 <li><p>The <code class="docutils literal notranslate"><span class="pre">asr</span></code> parameter specifies whether and how the <em>acoustic sum rule</em> (ASR) correction should be applied:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">realspace</span></code> applies the ASR correction is applied to the force constant matrix in real space</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">reciprocal</span></code> applies the ASR correction to the dynamical matrix at every <span class="math notranslate nohighlight">\(q\)</span>-point.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">reciprocal</span></code> applies the ASR correction to the dynamical matrix at every <span class="math notranslate nohighlight">\(q\)</span>-point (recommended).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">realspace</span></code> applies the ASR correction is applied to the force constant matrix in real space.
+This method is known to fail for polar systems.</p></li>
 </ul>
-<p>If not specified, the ASR correction is not applied.
+<p>If this parameter is not specified, the ASR correction is not applied.
+This means that the phonon modes are not enforced to have zero energy at the <span class="math notranslate nohighlight">\(\Gamma\)</span> point,
+and the dispersion close to <span class="math notranslate nohighlight">\(\Gamma\)</span> may not be linear.
 It’s generally best to specify it in the <code class="docutils literal notranslate"><span class="pre">reciprocal</span></code> mode.</p>
 </li>
 <li><p>The <code class="docutils literal notranslate"><span class="pre">use_c</span></code> parameter specifies whether to use the compiled C extension module for faster calculation or not.</p></li>
 </ul>
+<p>For further information and other options, type <cite>help(euphonic.CoherentCrystal)</cite> in the Matlab command window.</p>
 </section>
 <section id="fitting-data-with-euphonic-and-horace">
 <h3><a class="toc-backref" href="#id8">Fitting data with Euphonic and Horace</a><a class="headerlink" href="#fitting-data-with-euphonic-and-horace" title="Permalink to this headline"></a></h3>
@@ -884,7 +889,7 @@ same script as above, except that the function is now:</p>
 
   <div role="contentinfo">
     <p>&#169; Copyright 2006-2021, STFC RAL.
-      <span class="lastupdated">Last updated on Nov 9, 2021, 12:02:02 PM.
+      <span class="lastupdated">Last updated on Nov 10, 2021, 1:51:54 AM.
       </span></p>
   </div>
 
