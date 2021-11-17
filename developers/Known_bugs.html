@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Known bugs &mdash; Horace 3.6.1.e342142ef documentation</title>
+  <title>Known bugs &mdash; Horace 3.6.1.ad3b5130b documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -31,7 +31,7 @@
             <img src="../_static/150px-Quintus_Horatius_Flaccus.jpg" class="logo" alt="Logo"/>
           </a>
               <div class="version">
-                3.6.1.e342142ef
+                3.6.1.ad3b5130b
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
@@ -105,7 +105,7 @@
 <p>During the generation of particularly large SQW datasets, which is a computationally intensive process, MS Windows can sometimes just give up. This is evidenced in a so-called ‘broken pipe’ error, whereby low-level Matlab functions fail to execute due to the failure of very low-level Windows operations. At present we do not have a full fix for this, however it has been found that the following can help rectify the problem:</p>
 <ol class="arabic">
 <li><p><strong>Run your Horace command again</strong>, after typing</p>
-<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;&gt;</span> <span class="n">fclose</span> <span class="s">&#39;all&#39;</span>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="nb">fclose</span><span class="w"> </span><span class="s">&#39;all&#39;</span><span class="w"></span>
 </pre></div>
 </div>
 <p>This command ensures that all open files are closed, as there is a limit on the number of open files Matlab can deal with. You should then run your <code class="docutils literal notranslate"><span class="pre">gen_sqw</span></code> again. Sometimes it will fail again, having got slightly further than the previous time (e.g. 80% of the files dealt with, as opposed to 65% before). In these cases you should use the procedure described above several times. With each iteration the command gets closer to finishing. If the command does not get any closer to finishing, even after trying the above several times, then try step 2.</p>
@@ -137,7 +137,7 @@
 
   <div role="contentinfo">
     <p>&#169; Copyright 2006-2021, STFC RAL.
-      <span class="lastupdated">Last updated on Nov 10, 2021, 1:51:54 AM.
+      <span class="lastupdated">Last updated on Nov 17, 2021, 6:46:26 AM.
       </span></p>
   </div>
 

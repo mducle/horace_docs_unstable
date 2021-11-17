@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>FAQ &mdash; Horace 3.6.1.e342142ef documentation</title>
+  <title>FAQ &mdash; Horace 3.6.1.ad3b5130b documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -18,7 +18,7 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Changing object type" href="Changing_object_type.html" />
+    <link rel="next" title="Unsorted Manual Pages" href="../Unsorted.html" />
     <link rel="prev" title="Input file formats" href="Input_file_formats.html" /> 
 </head>
 
@@ -31,7 +31,7 @@
             <img src="../_static/150px-Quintus_Horatius_Flaccus.jpg" class="logo" alt="Logo"/>
           </a>
               <div class="version">
-                3.6.1.e342142ef
+                3.6.1.ad3b5130b
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
@@ -71,26 +71,7 @@
 <li class="toctree-l3"><a class="reference internal" href="#i-ve-got-a-problem-and-i-can-t-find-figure-out-how-to-solve-it-from-the-information-on-this-website">I’ve got a problem and I can’t find figure out how to solve it from the information on this website!</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="Changing_object_type.html">Changing object type</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Developer_information.html">Developer information</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Fitting.html">Fitting</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Herbert.html">Herbert</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Horace_and_Libisis_installation.html">Horace and Libisis installation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Horace_command_line.html">Horace command line</a></li>
-<li class="toctree-l2"><a class="reference internal" href="New.html">New</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Read_or_write_to_disk.html">Read or write to disk</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Remote_data_analysis.html">Remote data analysis</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Reshaping_etc.html">Reshaping etc</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Run_inspector.html">Run inspector</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Script_for_correcting_sample_misalignment.html">Script for correcting sample misalignment</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Script_for_data_treatment.html">Script for data treatment</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Script_for_fitting.html">Script for fitting</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Script_for_generating_sqw_files.html">Script for generating sqw files</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Script_for_making_cuts_and_plotting.html">Script for making cuts and plotting</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Script_for_making_publication_quality_figures.html">Script for making publication quality figures</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Script_for_making_simulations.html">Script for making simulations</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Script_for_planning_an_experiment.html">Script for planning an experiment</a></li>
-<li class="toctree-l2"><a class="reference internal" href="s_new.html">S new</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Unsorted.html">Unsorted Manual Pages</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../Citing.html">Citing Horace</a></li>
@@ -131,12 +112,12 @@
 <section id="can-i-include-more-than-one-data-file-spe-nxspe-with-the-same-experimental-configuration-in-an-sqw-file">
 <h2>Can I include more than one data file (spe/nxspe) with the same experimental configuration in an sqw file?<a class="headerlink" href="#can-i-include-more-than-one-data-file-spe-nxspe-with-the-same-experimental-configuration-in-an-sqw-file" title="Permalink to this headline"></a></h2>
 <p>Yes! The <code class="docutils literal notranslate"><span class="pre">gen_sqw</span></code> routine will check for repeat entries of filenames, so that you cannot accidentally include the same run twice. But you can have the same experimental conditions (Ei and psi) for different runs and include them. For example, suppose you had the same values of psi and Ei for file1 and fileN-1, and file2 and fileN, in the example below:</p>
-<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">my_files</span><span class="p">={</span><span class="s">&#39;file1&#39;</span><span class="p">,</span><span class="s">&#39;file2&#39;</span><span class="p">,</span><span class="s">&#39;file3&#39;</span><span class="p">,</span><span class="c">...,&#39;fileN-1&#39;,&#39;fileN};</span>
-<span class="c">...</span>
-<span class="nb">psi</span><span class="p">=[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="c">....,1,2]</span>
-<span class="c">...</span>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">my_files</span><span class="p">={</span><span class="s">&#39;file1&#39;</span><span class="p">,</span><span class="s">&#39;file2&#39;</span><span class="p">,</span><span class="s">&#39;file3&#39;</span><span class="p">,</span><span class="k">...</span><span class="c">,&#39;fileN-1&#39;,&#39;fileN};</span><span class="w"></span>
+<span class="k">...</span><span class="w"></span>
+<span class="nb">psi</span><span class="p">=[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="k">...</span><span class="c">.,1,2]</span><span class="w"></span>
+<span class="k">...</span><span class="w"></span>
 
-<span class="n">gen_sqw</span><span class="p">(</span><span class="c">...,my_files,...psi,...)</span>
+<span class="n">gen_sqw</span><span class="p">(</span><span class="k">...</span><span class="c">,my_files,...psi,...)</span><span class="w"></span>
 </pre></div>
 </div>
 <p>In the resultant sqw file the data from file1 and fileN-1, and file2 and fileN, will be combined and normalised correctly.</p>
@@ -169,14 +150,14 @@
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="Input_file_formats.html" class="btn btn-neutral float-left" title="Input file formats" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="Changing_object_type.html" class="btn btn-neutral float-right" title="Changing object type" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="../Unsorted.html" class="btn btn-neutral float-right" title="Unsorted Manual Pages" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
     <p>&#169; Copyright 2006-2021, STFC RAL.
-      <span class="lastupdated">Last updated on Nov 10, 2021, 1:51:54 AM.
+      <span class="lastupdated">Last updated on Nov 17, 2021, 6:46:26 AM.
       </span></p>
   </div>
 

@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Read or write to disk &mdash; Horace 3.6.1.e342142ef documentation</title>
+  <title>Read or write to disk &mdash; Horace 3.6.1.ad3b5130b documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -31,7 +31,7 @@
             <img src="../_static/150px-Quintus_Horatius_Flaccus.jpg" class="logo" alt="Logo"/>
           </a>
               <div class="version">
-                3.6.1.e342142ef
+                3.6.1.ad3b5130b
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
@@ -62,32 +62,35 @@
 <li class="toctree-l2"><a class="reference internal" href="List_of_functions.html">List of functions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Input_file_formats.html">Input file formats</a></li>
 <li class="toctree-l2"><a class="reference internal" href="FAQ.html">FAQ</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Changing_object_type.html">Changing object type</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Developer_information.html">Developer information</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Fitting.html">Fitting</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Herbert.html">Herbert</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Horace_and_Libisis_installation.html">Horace and Libisis installation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Horace_command_line.html">Horace command line</a></li>
-<li class="toctree-l2"><a class="reference internal" href="New.html">New</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Read or write to disk</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#read-horace-read-sqw-read-dnd">read_horace, read_sqw, read_dnd</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#save">save</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#save-xye">save_xye</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#head-horace-head-sqw-head-dnd">head_horace, head_sqw, head_dnd</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../Unsorted.html">Unsorted Manual Pages</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="Changing_object_type.html">Changing object type</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Developer_information.html">Developer information</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Fitting.html">Fitting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Herbert.html">Herbert</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Horace_and_Libisis_installation.html">Horace and Libisis installation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Horace_command_line.html">Horace command line</a></li>
+<li class="toctree-l3"><a class="reference internal" href="New.html">New</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Read or write to disk</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#read-horace-read-sqw-read-dnd">read_horace, read_sqw, read_dnd</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#save">save</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#save-xye">save_xye</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#head-horace-head-sqw-head-dnd">head_horace, head_sqw, head_dnd</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="Remote_data_analysis.html">Remote data analysis</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Reshaping_etc.html">Reshaping etc</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Run_inspector.html">Run inspector</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Script_for_correcting_sample_misalignment.html">Script for correcting sample misalignment</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Script_for_data_treatment.html">Script for data treatment</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Script_for_fitting.html">Script for fitting</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Script_for_generating_sqw_files.html">Script for generating sqw files</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Script_for_making_cuts_and_plotting.html">Script for making cuts and plotting</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Script_for_making_publication_quality_figures.html">Script for making publication quality figures</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Script_for_making_simulations.html">Script for making simulations</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Script_for_planning_an_experiment.html">Script for planning an experiment</a></li>
-<li class="toctree-l2"><a class="reference internal" href="s_new.html">S new</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Remote_data_analysis.html">Remote data analysis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Reshaping_etc.html">Reshaping etc</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Run_inspector.html">Run inspector</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Script_for_correcting_sample_misalignment.html">Script for correcting sample misalignment</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Script_for_data_treatment.html">Script for data treatment</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Script_for_fitting.html">Script for fitting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Script_for_generating_sqw_files.html">Script for generating sqw files</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Script_for_making_cuts_and_plotting.html">Script for making cuts and plotting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Script_for_making_publication_quality_figures.html">Script for making publication quality figures</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Script_for_making_simulations.html">Script for making simulations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Script_for_planning_an_experiment.html">Script for planning an experiment</a></li>
+<li class="toctree-l3"><a class="reference internal" href="s_new.html">S new</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../Citing.html">Citing Horace</a></li>
@@ -112,6 +115,7 @@
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
           <li><a href="../Horace_manual.html">Horace Manual</a> &raquo;</li>
+          <li><a href="../Unsorted.html">Unsorted Manual Pages</a> &raquo;</li>
       <li>Read or write to disk</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/manual/Read_or_write_to_disk.rst.txt" rel="nofollow"> View page source</a>
@@ -127,18 +131,18 @@
 <section id="read-horace-read-sqw-read-dnd">
 <h2>read_horace, read_sqw, read_dnd<a class="headerlink" href="#read-horace-read-sqw-read-dnd" title="Permalink to this headline"></a></h2>
 <p>There are three functions that can be used to read sqw or d1d,d2d,…d4d data from a binary file that was written using <code class="docutils literal notranslate"><span class="pre">save</span></code>.</p>
-<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">filename</span><span class="p">=</span><span class="s">&#39;C:\\mprogs\\myfile.dat&#39;</span><span class="p">;</span>
-<span class="n">w_read</span><span class="p">=</span><span class="n">read_horace</span><span class="p">(</span><span class="n">filename</span><span class="p">);</span>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">filename</span><span class="p">=</span><span class="s">&#39;C:\\mprogs\\myfile.dat&#39;</span><span class="p">;</span><span class="w"></span>
+<span class="n">w_read</span><span class="p">=</span><span class="n">read_horace</span><span class="p">(</span><span class="n">filename</span><span class="p">);</span><span class="w"></span>
 </pre></div>
 </div>
 <p>This is the most general function, and the one that is recommended for general use. In the example shown here <code class="docutils literal notranslate"><span class="pre">w_read</span></code> will contain an sqw object or d1d,d2d,…d4d object depending on the contents of the file. (Here the example data file has deliberately been chosen to have an ambiguous extension. Normally you would save an object to a file with the conventional extension for the object in question: .sqw, .d1d, .d2d, .d3d, .d4d.)</p>
-<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">filename</span><span class="p">=</span><span class="s">&#39;C:\\mprogs\\myfile.sqw&#39;</span><span class="p">;</span>
-<span class="n">w_read</span><span class="p">=</span><span class="n">read_sqw</span><span class="p">(</span><span class="n">filename</span><span class="p">);</span>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">filename</span><span class="p">=</span><span class="s">&#39;C:\\mprogs\\myfile.sqw&#39;</span><span class="p">;</span><span class="w"></span>
+<span class="n">w_read</span><span class="p">=</span><span class="n">read_sqw</span><span class="p">(</span><span class="n">filename</span><span class="p">);</span><span class="w"></span>
 </pre></div>
 </div>
 <p>In the example shown here <code class="docutils literal notranslate"><span class="pre">w_read</span></code> is an sqw object, since the data in <code class="docutils literal notranslate"><span class="pre">myfile.sqw</span></code> originated from a cut created using cut_sqw with option ‘-pix’.</p>
-<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">filename</span><span class="p">=</span><span class="s">&#39;C:\\mprogs\\myfile.d1d&#39;</span><span class="p">;</span>
-<span class="n">w_read</span><span class="p">=</span><span class="n">read_sqw</span><span class="p">(</span><span class="n">filename</span><span class="p">);</span>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">filename</span><span class="p">=</span><span class="s">&#39;C:\\mprogs\\myfile.d1d&#39;</span><span class="p">;</span><span class="w"></span>
+<span class="n">w_read</span><span class="p">=</span><span class="n">read_sqw</span><span class="p">(</span><span class="n">filename</span><span class="p">);</span><span class="w"></span>
 </pre></div>
 </div>
 <p>In the example shown here <code class="docutils literal notranslate"><span class="pre">w_read</span></code> is an d1d object, since the data in <code class="docutils literal notranslate"><span class="pre">myfile.d1d</span></code> originated from a cut created using cut_sqw with option ‘-nopix’.</p>
@@ -146,8 +150,8 @@
 <section id="save">
 <h2>save<a class="headerlink" href="#save" title="Permalink to this headline"></a></h2>
 <p>Function that applies to all dimensionalities and types of datasets.</p>
-<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">filename</span><span class="p">=</span><span class="s">&#39;C:\\mprogs\\myfile.dat&#39;</span><span class="p">;</span>
-<span class="n">save</span><span class="p">(</span><span class="n">w_in</span><span class="p">,</span><span class="n">filename</span><span class="p">);</span>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">filename</span><span class="p">=</span><span class="s">&#39;C:\\mprogs\\myfile.dat&#39;</span><span class="p">;</span><span class="w"></span>
+<span class="nb">save</span><span class="p">(</span><span class="n">w_in</span><span class="p">,</span><span class="n">filename</span><span class="p">);</span><span class="w"></span>
 </pre></div>
 </div>
 <p>This function writes the n-dimensional dataset <code class="docutils literal notranslate"><span class="pre">w_in</span></code> (sqw type or d1d etc type) to a file specified by the string <code class="docutils literal notranslate"><span class="pre">filename</span></code>.</p>
@@ -155,8 +159,8 @@
 <section id="save-xye">
 <h2>save_xye<a class="headerlink" href="#save-xye" title="Permalink to this headline"></a></h2>
 <p>Save data in an sqw or dnd dataset to an ascii file.</p>
-<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">filename</span><span class="p">=</span><span class="s">&#39;C:\\mprogs\\my_ascii_file.txt&#39;</span><span class="p">;</span>
-<span class="n">save_xye</span><span class="p">(</span><span class="n">w_in</span><span class="p">,</span><span class="n">filename</span><span class="p">);</span>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">filename</span><span class="p">=</span><span class="s">&#39;C:\\mprogs\\my_ascii_file.txt&#39;</span><span class="p">;</span><span class="w"></span>
+<span class="n">save_xye</span><span class="p">(</span><span class="n">w_in</span><span class="p">,</span><span class="n">filename</span><span class="p">);</span><span class="w"></span>
 </pre></div>
 </div>
 <p>The format of the ascii file for an n-dimensional dataset is n columns of co-ordinates along each of the axes, plus one column of signal and another column of error (variance).</p>
@@ -164,20 +168,20 @@
 <section id="head-horace-head-sqw-head-dnd">
 <h2>head_horace, head_sqw, head_dnd<a class="headerlink" href="#head-horace-head-sqw-head-dnd" title="Permalink to this headline"></a></h2>
 <p>These functions return a Matlab structure containing with the header information in an sqw or dnd file.</p>
-<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">filename</span><span class="p">=</span><span class="s">&#39;C:\\mprogs\\myfile.sqw&#39;</span>
-<span class="n">h</span><span class="p">=</span><span class="n">head_horace</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
-<span class="n">hfull</span><span class="p">=</span><span class="n">head_horace</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span><span class="s">&#39;-full&#39;</span><span class="p">)</span>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">filename</span><span class="p">=</span><span class="s">&#39;C:\\mprogs\\myfile.sqw&#39;</span><span class="w"></span>
+<span class="n">h</span><span class="p">=</span><span class="n">head_horace</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span><span class="w"></span>
+<span class="n">hfull</span><span class="p">=</span><span class="n">head_horace</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span><span class="s">&#39;-full&#39;</span><span class="p">)</span><span class="w"></span>
 </pre></div>
 </div>
 <p>The header information is read from a binary file containing an sqw object or dnd object.</p>
-<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">filename</span><span class="p">=</span><span class="s">&#39;C:\\mprogs\\myfile.sqw&#39;</span>
-<span class="n">h</span><span class="p">=</span><span class="n">head_sqw</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
-<span class="n">hfull</span><span class="p">=</span><span class="n">head_sqw</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span><span class="s">&#39;-full&#39;</span><span class="p">)</span>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">filename</span><span class="p">=</span><span class="s">&#39;C:\\mprogs\\myfile.sqw&#39;</span><span class="w"></span>
+<span class="n">h</span><span class="p">=</span><span class="n">head_sqw</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span><span class="w"></span>
+<span class="n">hfull</span><span class="p">=</span><span class="n">head_sqw</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span><span class="s">&#39;-full&#39;</span><span class="p">)</span><span class="w"></span>
 </pre></div>
 </div>
 <p>The header information is read from a binary file containing an sqw object.</p>
-<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">filename</span><span class="p">=</span><span class="s">&#39;C:\\mprogs\\myfile.sqw&#39;</span>
-<span class="n">h</span><span class="p">=</span><span class="n">head_dnd</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">filename</span><span class="p">=</span><span class="s">&#39;C:\\mprogs\\myfile.sqw&#39;</span><span class="w"></span>
+<span class="n">h</span><span class="p">=</span><span class="n">head_dnd</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span><span class="w"></span>
 </pre></div>
 </div>
 <p>The header information is read from a binary file containing a dnd object. If the file contains an sqw object, then the header information that is returned is that if there was an implicit conversion of the sqw onject to a dnd object.</p>
@@ -196,7 +200,7 @@
 
   <div role="contentinfo">
     <p>&#169; Copyright 2006-2021, STFC RAL.
-      <span class="lastupdated">Last updated on Nov 10, 2021, 1:51:54 AM.
+      <span class="lastupdated">Last updated on Nov 17, 2021, 6:46:26 AM.
       </span></p>
   </div>
 

@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Manipulating and extracting data from SQW files and objects &mdash; Horace 3.6.1.e342142ef documentation</title>
+  <title>Manipulating and extracting data from SQW files and objects &mdash; Horace 3.6.1.ad3b5130b documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -31,7 +31,7 @@
             <img src="../_static/150px-Quintus_Horatius_Flaccus.jpg" class="logo" alt="Logo"/>
           </a>
               <div class="version">
-                3.6.1.e342142ef
+                3.6.1.ad3b5130b
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
@@ -76,26 +76,7 @@
 <li class="toctree-l2"><a class="reference internal" href="List_of_functions.html">List of functions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Input_file_formats.html">Input file formats</a></li>
 <li class="toctree-l2"><a class="reference internal" href="FAQ.html">FAQ</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Changing_object_type.html">Changing object type</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Developer_information.html">Developer information</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Fitting.html">Fitting</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Herbert.html">Herbert</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Horace_and_Libisis_installation.html">Horace and Libisis installation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Horace_command_line.html">Horace command line</a></li>
-<li class="toctree-l2"><a class="reference internal" href="New.html">New</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Read_or_write_to_disk.html">Read or write to disk</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Remote_data_analysis.html">Remote data analysis</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Reshaping_etc.html">Reshaping etc</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Run_inspector.html">Run inspector</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Script_for_correcting_sample_misalignment.html">Script for correcting sample misalignment</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Script_for_data_treatment.html">Script for data treatment</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Script_for_fitting.html">Script for fitting</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Script_for_generating_sqw_files.html">Script for generating sqw files</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Script_for_making_cuts_and_plotting.html">Script for making cuts and plotting</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Script_for_making_publication_quality_figures.html">Script for making publication quality figures</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Script_for_making_simulations.html">Script for making simulations</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Script_for_planning_an_experiment.html">Script for planning an experiment</a></li>
-<li class="toctree-l2"><a class="reference internal" href="s_new.html">S new</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Unsorted.html">Unsorted Manual Pages</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../Citing.html">Citing Horace</a></li>
@@ -135,7 +116,7 @@
 <section id="cut-sqw">
 <h2>cut_sqw<a class="headerlink" href="#cut-sqw" title="Permalink to this headline"></a></h2>
 <p>There are various different forms of input for this function, the purpose of which is to take data from an SQW file and turn it into a n-dimensional cut which can be plotted, manipulated, etc. The “compulsory” inputs are given as follows:</p>
-<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">my_cut</span> <span class="p">=</span> <span class="n">cut_sqw</span> <span class="p">(</span><span class="n">data_source</span><span class="p">,</span> <span class="n">proj</span><span class="p">,</span> <span class="n">p1_bin</span><span class="p">,</span> <span class="n">p2_bin</span><span class="p">,</span> <span class="n">p3_bin</span><span class="p">)</span>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">my_cut</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">cut_sqw</span><span class="w"> </span><span class="p">(</span><span class="n">data_source</span><span class="p">,</span><span class="w"> </span><span class="n">proj</span><span class="p">,</span><span class="w"> </span><span class="n">p1_bin</span><span class="p">,</span><span class="w"> </span><span class="n">p2_bin</span><span class="p">,</span><span class="w"> </span><span class="n">p3_bin</span><span class="p">)</span><span class="w"></span>
 </pre></div>
 </div>
 <p><code class="docutils literal notranslate"><span class="pre">data_source</span></code> is a string giving the full filename (including path) of the input SQW file.</p>
@@ -168,7 +149,7 @@ There are optional fields too:
 <li><p><code class="docutils literal notranslate"><span class="pre">p4_bin</span></code> specifies the binning / integration along the energy axis. In addition to the forms listed above for Q-axes, it is also possible to specify a binning of 0 for the energy axis <em>only</em>. In this case the energy binning that was specified when the raw data were converted into SPE format by the data reduction code that created them.</p></li>
 </ul>
 <p><strong>Optional arguments</strong></p>
-<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">my_cut</span> <span class="p">=</span> <span class="n">cut_sqw</span> <span class="p">(</span><span class="n">data_source</span><span class="p">,</span> <span class="n">proj</span><span class="p">,</span> <span class="n">p1_bin</span><span class="p">,</span> <span class="n">p2_bin</span><span class="p">,</span> <span class="n">p3_bin</span><span class="p">,</span> <span class="n">p4_bin</span><span class="p">,</span> <span class="s">&#39;-nopix&#39;</span><span class="p">,</span> <span class="n">filename</span><span class="p">)</span>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">my_cut</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">cut_sqw</span><span class="w"> </span><span class="p">(</span><span class="n">data_source</span><span class="p">,</span><span class="w"> </span><span class="n">proj</span><span class="p">,</span><span class="w"> </span><span class="n">p1_bin</span><span class="p">,</span><span class="w"> </span><span class="n">p2_bin</span><span class="p">,</span><span class="w"> </span><span class="n">p3_bin</span><span class="p">,</span><span class="w"> </span><span class="n">p4_bin</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;-nopix&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">filename</span><span class="p">)</span><span class="w"></span>
 </pre></div>
 </div>
 <ul class="simple">
@@ -180,70 +161,70 @@ There are optional fields too:
 <h2>cut<a class="headerlink" href="#cut" title="Permalink to this headline"></a></h2>
 <p>This is a specific case of cut_sqw that can be used to take cuts from sqw objects that are already in memory, rather than on disk in the SQW file. Such objects can either be the result of using cut_sqw, or if have been read into memory from disk using the read_horace function</p>
 <p>To take a cut from an existing sqw or dnd object, retaining the existing projection axes and binning:</p>
-<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">w1</span><span class="p">=</span><span class="n">cut</span><span class="p">(</span><span class="n">w</span><span class="p">,[],[</span><span class="n">lo1</span><span class="p">,</span><span class="n">hi1</span><span class="p">],[</span><span class="n">lo2</span><span class="p">,</span><span class="n">hi2</span><span class="p">],</span><span class="c">...)</span>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">w1</span><span class="p">=</span><span class="n">cut</span><span class="p">(</span><span class="n">w</span><span class="p">,[],[</span><span class="n">lo1</span><span class="p">,</span><span class="n">hi1</span><span class="p">],[</span><span class="n">lo2</span><span class="p">,</span><span class="n">hi2</span><span class="p">],</span><span class="k">...</span><span class="c">)</span><span class="w"></span>
 </pre></div>
 </div>
 <p>Note that the number of binning arguments need only match the dimensionality of the object <code class="docutils literal notranslate"><span class="pre">w</span></code> (i.e. the number of plot axes), so can be fewer than 4. Note also that you cannot change the binning in a dnd object, i.e. you can only set the integration ranges and have to use <code class="docutils literal notranslate"><span class="pre">[]</span></code> for the plot axis. The only option you have is to change the range of the plot axis by specifying <code class="docutils literal notranslate"><span class="pre">[lo1,0,hi1]</span></code> instead of <code class="docutils literal notranslate"><span class="pre">[]</span></code> (the ‘0’ means ‘use existing bin size’)</p>
 <p>To take a cut from an existing sqw object and change the binning along one or more of the plot axes:</p>
-<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">w1</span><span class="p">=</span><span class="n">cut</span><span class="p">(</span><span class="n">w</span><span class="p">,</span> <span class="n">p1_bin</span><span class="p">,</span> <span class="n">p2_bin</span><span class="p">,</span><span class="c">....)</span>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">w1</span><span class="p">=</span><span class="n">cut</span><span class="p">(</span><span class="n">w</span><span class="p">,</span><span class="w"> </span><span class="n">p1_bin</span><span class="p">,</span><span class="w"> </span><span class="n">p2_bin</span><span class="p">,</span><span class="k">...</span><span class="c">.)</span><span class="w"></span>
 </pre></div>
 </div>
 <p>where <code class="docutils literal notranslate"><span class="pre">pbin_1</span></code>, <code class="docutils literal notranslate"><span class="pre">pbin_2</span></code>,… have the same form as for cut_sqw described above, and there are as many binning arguments as the dimensionality of the object. This is essentially the same syntax as <code class="docutils literal notranslate"><span class="pre">cut_sqw</span></code>, but with an sqw object rather than an SQW file as the first input, and the projection axes left unchanged. The same set of optional arguments, namely <code class="docutils literal notranslate"><span class="pre">'-nopix'</span></code> and <code class="docutils literal notranslate"><span class="pre">filename</span></code> also applies.</p>
 <p>To take a cut from an existing sqw object and change the plot axes (i.e. use a new set of projections):</p>
-<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">w1</span><span class="p">=</span><span class="n">cut</span><span class="p">(</span><span class="n">w</span><span class="p">,</span> <span class="n">proj</span><span class="p">,</span> <span class="n">p1_bin</span><span class="p">,</span> <span class="n">p2_bin</span><span class="p">,</span> <span class="n">p3_bin</span><span class="p">,</span> <span class="n">p4_bin</span><span class="p">)</span>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">w1</span><span class="p">=</span><span class="n">cut</span><span class="p">(</span><span class="n">w</span><span class="p">,</span><span class="w"> </span><span class="n">proj</span><span class="p">,</span><span class="w"> </span><span class="n">p1_bin</span><span class="p">,</span><span class="w"> </span><span class="n">p2_bin</span><span class="p">,</span><span class="w"> </span><span class="n">p3_bin</span><span class="p">,</span><span class="w"> </span><span class="n">p4_bin</span><span class="p">)</span><span class="w"></span>
 </pre></div>
 </div>
 <p>where <code class="docutils literal notranslate"><span class="pre">pbin_1</span></code>, <code class="docutils literal notranslate"><span class="pre">pbin_2</span></code>,… have the same form as for cut_sqw described above, and there are as many binning arguments as the dimensionality of the object. This is essentially the same syntax as <code class="docutils literal notranslate"><span class="pre">cut_sqw</span></code>, but with an sqw object rather than an SQW file as the first input. The same set of optional arguments, namely <code class="docutils literal notranslate"><span class="pre">'-nopix'</span></code> and <code class="docutils literal notranslate"><span class="pre">filename</span></code> also applies.</p>
 </section>
 <section id="head-horace">
 <h2>head_horace<a class="headerlink" href="#head-horace" title="Permalink to this headline"></a></h2>
-<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">info</span><span class="p">=</span><span class="n">head_horace</span><span class="p">(</span><span class="n">filename</span><span class="p">);</span>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">info</span><span class="p">=</span><span class="n">head_horace</span><span class="p">(</span><span class="n">filename</span><span class="p">);</span><span class="w"></span>
 
-<span class="n">info</span><span class="p">=</span><span class="n">head_horace</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span><span class="s">&#39;-full&#39;</span><span class="p">)</span>
+<span class="n">info</span><span class="p">=</span><span class="n">head_horace</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span><span class="s">&#39;-full&#39;</span><span class="p">)</span><span class="w"></span>
 </pre></div>
 </div>
 <p>This is a function to give the header information in an SQW file or file to which an sqw object or dnd object has been saved, and whose full filename is given by the argument <code class="docutils literal notranslate"><span class="pre">filename</span></code>. If the option <code class="docutils literal notranslate"><span class="pre">'-full'</span></code> is used then a fuller set of header information, rather than just the principal header, is returned. The purpose of this function is to read the contents regardless of your knowledge of whether or not the file contains an sqw object or a dnd object.</p>
 </section>
 <section id="head-sqw">
 <h2>head_sqw<a class="headerlink" href="#head-sqw" title="Permalink to this headline"></a></h2>
-<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">info</span><span class="p">=</span><span class="n">head_sqw</span><span class="p">(</span><span class="n">filename</span><span class="p">);</span>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">info</span><span class="p">=</span><span class="n">head_sqw</span><span class="p">(</span><span class="n">filename</span><span class="p">);</span><span class="w"></span>
 
-<span class="n">info</span><span class="p">=</span><span class="n">head_sqw</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span><span class="s">&#39;-full&#39;</span><span class="p">)</span>
+<span class="n">info</span><span class="p">=</span><span class="n">head_sqw</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span><span class="s">&#39;-full&#39;</span><span class="p">)</span><span class="w"></span>
 </pre></div>
 </div>
 <p>This is a function to give the header information in an SQW file or file to which an sqw object has been saved, whose full filename is given by the argument <code class="docutils literal notranslate"><span class="pre">filename</span></code>. If the option <code class="docutils literal notranslate"><span class="pre">'-full'</span></code> is used then a fuller set of header information, rather than just the principal header, is returned.</p>
 </section>
 <section id="head-dnd">
 <h2>head_dnd<a class="headerlink" href="#head-dnd" title="Permalink to this headline"></a></h2>
-<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">info</span><span class="p">=</span><span class="n">head_dnd</span><span class="p">(</span><span class="n">filename</span><span class="p">);</span>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">info</span><span class="p">=</span><span class="n">head_dnd</span><span class="p">(</span><span class="n">filename</span><span class="p">);</span><span class="w"></span>
 </pre></div>
 </div>
 <p>This is a function to give the header information in file to which a dnd object has been saved, whose full filename is given by the argument <code class="docutils literal notranslate"><span class="pre">filename</span></code>.</p>
 </section>
 <section id="read-horace">
 <h2>read_horace<a class="headerlink" href="#read-horace" title="Permalink to this headline"></a></h2>
-<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">output</span><span class="p">=</span><span class="n">read_horace</span><span class="p">(</span><span class="n">filename</span><span class="p">);</span>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">output</span><span class="p">=</span><span class="n">read_horace</span><span class="p">(</span><span class="n">filename</span><span class="p">);</span><span class="w"></span>
 </pre></div>
 </div>
 <p>This is a function to read sqw or dnd data from a file. The object type is determined from the contents of the file. If the file contains a full sqw dataset (whether created using gen_sqw or as the result of saving a cut), the returned variable is an sqw object; if the file contains a dnd dataset, the output is the corresponding d01, d1d, …or d4d object.</p>
 </section>
 <section id="read-sqw">
 <h2>read_sqw<a class="headerlink" href="#read-sqw" title="Permalink to this headline"></a></h2>
-<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">output</span><span class="p">=</span><span class="n">read_sqw</span><span class="p">(</span><span class="n">filename</span><span class="p">);</span>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">output</span><span class="p">=</span><span class="n">read_sqw</span><span class="p">(</span><span class="n">filename</span><span class="p">);</span><span class="w"></span>
 </pre></div>
 </div>
 <p>This is a function to read sqw data from a file. Note that in this context we mean an n-dimensional dataset, which includes pixel information, that has been saved to file. This could be either a full SQW file created wusing gen_sqw, or an sqw dataset that has been saved to file. The object <code class="docutils literal notranslate"><span class="pre">output</span></code> will be an sqw object.</p>
 </section>
 <section id="read-dnd">
 <h2>read_dnd<a class="headerlink" href="#read-dnd" title="Permalink to this headline"></a></h2>
-<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">output</span><span class="p">=</span><span class="n">read_dnd</span><span class="p">(</span><span class="n">filename</span><span class="p">);</span>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">output</span><span class="p">=</span><span class="n">read_dnd</span><span class="p">(</span><span class="n">filename</span><span class="p">);</span><span class="w"></span>
 </pre></div>
 </div>
 <p>Exactly the same as above, but reads dnd data saved to file. If the file contains full sqw dataset, then it will be read as if it contained just a dnd dataset.</p>
 </section>
 <section id="save">
 <h2>save<a class="headerlink" href="#save" title="Permalink to this headline"></a></h2>
-<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">save</span><span class="p">(</span><span class="n">object</span><span class="p">,</span><span class="n">filename</span><span class="p">)</span>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="nb">save</span><span class="p">(</span><span class="n">object</span><span class="p">,</span><span class="n">filename</span><span class="p">)</span><span class="w"></span>
 </pre></div>
 </div>
 <p>Saves the sqw object or dnd object <code class="docutils literal notranslate"><span class="pre">object</span></code> from the Matlab workspace into the file specified by <code class="docutils literal notranslate"><span class="pre">filename</span></code>.</p>
@@ -251,8 +232,8 @@ There are optional fields too:
 <section id="save-xye">
 <h2>save_xye<a class="headerlink" href="#save-xye" title="Permalink to this headline"></a></h2>
 <p>Save data in an sqw or dnd dataset to an ascii file.</p>
-<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">filename</span><span class="p">=</span><span class="s">&#39;C:\\mprogs\\my_ascii_file.txt&#39;</span><span class="p">;</span>
-<span class="n">save_xye</span><span class="p">(</span><span class="n">w_in</span><span class="p">,</span><span class="n">filename</span><span class="p">);</span>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">filename</span><span class="p">=</span><span class="s">&#39;C:\\mprogs\\my_ascii_file.txt&#39;</span><span class="p">;</span><span class="w"></span>
+<span class="n">save_xye</span><span class="p">(</span><span class="n">w_in</span><span class="p">,</span><span class="n">filename</span><span class="p">);</span><span class="w"></span>
 </pre></div>
 </div>
 <p>The format of the ascii file for an n-dimensional dataset is n columns of co-ordinates along each of the axes, plus one column of signal and another column of error (standard deviation).</p>
@@ -260,7 +241,7 @@ There are optional fields too:
 <section id="xye">
 <h2>xye<a class="headerlink" href="#xye" title="Permalink to this headline"></a></h2>
 <p>Extract the bin centres, intensity and standard errors from an sqw or dnd object.</p>
-<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">S</span><span class="p">=</span><span class="n">xye</span><span class="p">(</span><span class="n">w</span><span class="p">);</span>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">S</span><span class="p">=</span><span class="n">xye</span><span class="p">(</span><span class="n">w</span><span class="p">);</span><span class="w"></span>
 </pre></div>
 </div>
 <p>The output is a structure with fields S.x (bin centres if a 1D object, or cell array of vectors containing the bin centres along each axis if 2D, 3D or 4D object), S.y (array of intensities), S.e (array of estimated error on the intensities).</p>
@@ -268,7 +249,7 @@ There are optional fields too:
 <section id="hkle">
 <h2>hkle<a class="headerlink" href="#hkle" title="Permalink to this headline"></a></h2>
 <p>Obtain the reciprocal space coordinate [h,k,l,e] for points in the coordinates of the display axes for an sqw object <strong>from a single spe file</strong></p>
-<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">qe1</span><span class="p">,</span><span class="n">qe2</span><span class="p">]</span> <span class="p">=</span> <span class="n">hkle</span><span class="p">(</span><span class="n">w</span><span class="p">,</span><span class="n">x</span><span class="p">)</span>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">qe1</span><span class="p">,</span><span class="n">qe2</span><span class="p">]</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">hkle</span><span class="p">(</span><span class="n">w</span><span class="p">,</span><span class="n">x</span><span class="p">)</span><span class="w"></span>
 </pre></div>
 </div>
 <p>The inputs take the form:</p>
@@ -292,7 +273,7 @@ There are optional fields too:
 
   <div role="contentinfo">
     <p>&#169; Copyright 2006-2021, STFC RAL.
-      <span class="lastupdated">Last updated on Nov 10, 2021, 1:51:54 AM.
+      <span class="lastupdated">Last updated on Nov 17, 2021, 6:46:26 AM.
       </span></p>
   </div>
 

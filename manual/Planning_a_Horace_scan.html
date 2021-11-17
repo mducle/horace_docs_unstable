@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Planning a Horace scan &mdash; Horace 3.6.1.e342142ef documentation</title>
+  <title>Planning a Horace scan &mdash; Horace 3.6.1.ad3b5130b documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -31,7 +31,7 @@
             <img src="../_static/150px-Quintus_Horatius_Flaccus.jpg" class="logo" alt="Logo"/>
           </a>
               <div class="version">
-                3.6.1.e342142ef
+                3.6.1.ad3b5130b
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
@@ -66,26 +66,7 @@
 <li class="toctree-l2"><a class="reference internal" href="List_of_functions.html">List of functions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Input_file_formats.html">Input file formats</a></li>
 <li class="toctree-l2"><a class="reference internal" href="FAQ.html">FAQ</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Changing_object_type.html">Changing object type</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Developer_information.html">Developer information</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Fitting.html">Fitting</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Herbert.html">Herbert</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Horace_and_Libisis_installation.html">Horace and Libisis installation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Horace_command_line.html">Horace command line</a></li>
-<li class="toctree-l2"><a class="reference internal" href="New.html">New</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Read_or_write_to_disk.html">Read or write to disk</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Remote_data_analysis.html">Remote data analysis</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Reshaping_etc.html">Reshaping etc</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Run_inspector.html">Run inspector</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Script_for_correcting_sample_misalignment.html">Script for correcting sample misalignment</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Script_for_data_treatment.html">Script for data treatment</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Script_for_fitting.html">Script for fitting</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Script_for_generating_sqw_files.html">Script for generating sqw files</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Script_for_making_cuts_and_plotting.html">Script for making cuts and plotting</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Script_for_making_publication_quality_figures.html">Script for making publication quality figures</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Script_for_making_simulations.html">Script for making simulations</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Script_for_planning_an_experiment.html">Script for planning an experiment</a></li>
-<li class="toctree-l2"><a class="reference internal" href="s_new.html">S new</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Unsorted.html">Unsorted Manual Pages</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../Citing.html">Citing Horace</a></li>
@@ -126,7 +107,7 @@
 <h2>horace_planner: a simple scan planner<a class="headerlink" href="#horace-planner-a-simple-scan-planner" title="Permalink to this headline"></a></h2>
 <p>Horace has a useful little tool which allows you to work out the coverage of reciprocal space that will be achieved for a given instrument / incident energy / sample angle range.</p>
 <p>You start it up by typing</p>
-<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">horace_planner</span>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">horace_planner</span><span class="w"></span>
 </pre></div>
 </div>
 <p>The graphical user interface shown below should open up</p>
@@ -143,35 +124,35 @@
 <h2>More detailed planning of scans<a class="headerlink" href="#more-detailed-planning-of-scans" title="Permalink to this headline"></a></h2>
 <p>The scan planner shown above is quick and simple to use. But sometimes you want to inspect very carefully exactly what reciprocal space coverage you will get for a given scan. To do this you can generate a fake dataset, where the ‘signal’ is represented as the angle of of the contributing scan at each point. Note that this process is rather slow, so is better for checking your decisions about what scan range and incident energy from the simple scan planner detailed above.</p>
 <p>An example script for generating fake data is given below.</p>
-<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">en</span><span class="p">=[</span><span class="mi">0</span><span class="p">:</span><span class="mi">10</span><span class="p">:</span><span class="mi">190</span><span class="p">];</span>  <span class="c">% energy bins (coarse for simulation)</span>
-<span class="n">par_file</span><span class="p">=</span><span class="s">&#39;/usr/local/mprogs/Libisis/InstrumentFiles/maps/4to1_124.par&#39;</span><span class="p">;</span>  <span class="c">% detector parameter file</span>
-<span class="n">sqw_file_fake</span><span class="p">=</span><span class="s">&#39;/home/maps/maps_users/Gruenwald/fake_200meV.sqw&#39;</span><span class="p">;</span>         <span class="c">% name of output file</span>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">en</span><span class="p">=[</span><span class="mi">0</span><span class="p">:</span><span class="mi">10</span><span class="p">:</span><span class="mi">190</span><span class="p">];</span><span class="w">  </span><span class="c">% energy bins (coarse for simulation)</span><span class="w"></span>
+<span class="n">par_file</span><span class="p">=</span><span class="s">&#39;/usr/local/mprogs/Libisis/InstrumentFiles/maps/4to1_124.par&#39;</span><span class="p">;</span><span class="w">  </span><span class="c">% detector parameter file</span><span class="w"></span>
+<span class="n">sqw_file_fake</span><span class="p">=</span><span class="s">&#39;/home/maps/maps_users/Gruenwald/fake_200meV.sqw&#39;</span><span class="p">;</span><span class="w">         </span><span class="c">% name of output file</span><span class="w"></span>
 
-<span class="n">efix</span><span class="p">=</span><span class="mi">200</span><span class="p">;</span>  <span class="c">% incident energy</span>
-<span class="n">emode</span><span class="p">=</span><span class="mi">1</span><span class="p">;</span>   <span class="c">% select 1 for direct geometry spectrometer</span>
+<span class="n">efix</span><span class="p">=</span><span class="mi">200</span><span class="p">;</span><span class="w">  </span><span class="c">% incident energy</span><span class="w"></span>
+<span class="n">emode</span><span class="p">=</span><span class="mi">1</span><span class="p">;</span><span class="w">   </span><span class="c">% select 1 for direct geometry spectrometer</span><span class="w"></span>
 
-<span class="n">alatt</span><span class="p">=[</span><span class="mf">5.7</span><span class="p">,</span><span class="mf">5.7</span><span class="p">,</span><span class="mf">5.7</span><span class="p">];</span>
-<span class="n">angdeg</span><span class="p">=[</span><span class="mi">90</span><span class="p">,</span><span class="mi">90</span><span class="p">,</span><span class="mi">90</span><span class="p">];</span>
+<span class="n">alatt</span><span class="p">=[</span><span class="mf">5.7</span><span class="p">,</span><span class="mf">5.7</span><span class="p">,</span><span class="mf">5.7</span><span class="p">];</span><span class="w"></span>
+<span class="n">angdeg</span><span class="p">=[</span><span class="mi">90</span><span class="p">,</span><span class="mi">90</span><span class="p">,</span><span class="mi">90</span><span class="p">];</span><span class="w"></span>
 
-<span class="n">u</span><span class="p">=[</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">];</span> <span class="n">v</span><span class="p">=[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">];</span>
+<span class="n">u</span><span class="p">=[</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">];</span><span class="w"> </span><span class="n">v</span><span class="p">=[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">];</span><span class="w"></span>
 
-<span class="nb">psi</span><span class="p">=[</span><span class="o">-</span><span class="mi">90</span><span class="p">:</span><span class="mi">0</span><span class="p">];</span>  <span class="c">% scan range in degrees</span>
+<span class="nb">psi</span><span class="p">=[</span><span class="o">-</span><span class="mi">90</span><span class="p">:</span><span class="mi">0</span><span class="p">];</span><span class="w">  </span><span class="c">% scan range in degrees</span><span class="w"></span>
 
-<span class="n">omega</span><span class="p">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">dpsi</span><span class="p">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">gl</span><span class="p">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">gs</span><span class="p">=</span><span class="mi">0</span><span class="p">;</span>
+<span class="n">omega</span><span class="p">=</span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">dpsi</span><span class="p">=</span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">gl</span><span class="p">=</span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">gs</span><span class="p">=</span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
 
-<span class="n">fake_sqw</span> <span class="p">(</span><span class="n">en</span><span class="p">,</span> <span class="n">par_file</span><span class="p">,</span> <span class="n">sqw_file_fake</span><span class="p">,</span> <span class="n">efix</span><span class="p">,</span> <span class="n">emode</span><span class="p">,</span> <span class="n">alatt</span><span class="p">,</span> <span class="n">angdeg</span><span class="p">,</span><span class="c">...</span>
-                     <span class="n">u</span><span class="p">,</span> <span class="n">v</span><span class="p">,</span> <span class="nb">psi</span><span class="p">,</span> <span class="n">omega</span><span class="p">,</span> <span class="n">dpsi</span><span class="p">,</span> <span class="n">gl</span><span class="p">,</span> <span class="n">gs</span><span class="p">);</span>
+<span class="n">fake_sqw</span><span class="w"> </span><span class="p">(</span><span class="n">en</span><span class="p">,</span><span class="w"> </span><span class="n">par_file</span><span class="p">,</span><span class="w"> </span><span class="n">sqw_file_fake</span><span class="p">,</span><span class="w"> </span><span class="n">efix</span><span class="p">,</span><span class="w"> </span><span class="n">emode</span><span class="p">,</span><span class="w"> </span><span class="n">alatt</span><span class="p">,</span><span class="w"> </span><span class="n">angdeg</span><span class="p">,</span><span class="k">...</span><span class="w"></span>
+<span class="w">                     </span><span class="n">u</span><span class="p">,</span><span class="w"> </span><span class="n">v</span><span class="p">,</span><span class="w"> </span><span class="nb">psi</span><span class="p">,</span><span class="w"> </span><span class="n">omega</span><span class="p">,</span><span class="w"> </span><span class="n">dpsi</span><span class="p">,</span><span class="w"> </span><span class="n">gl</span><span class="p">,</span><span class="w"> </span><span class="n">gs</span><span class="p">);</span><span class="w"></span>
 </pre></div>
 </div>
 <p>Once you have created this fake dataset you can take cuts and slices out of it in exactly the same way as you would a real dataset. For example:</p>
-<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">proj</span><span class="p">.</span><span class="n">u</span><span class="p">=[</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">];</span> <span class="n">proj</span><span class="p">.</span><span class="n">v</span><span class="p">=[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">];</span> <span class="n">proj</span><span class="p">.</span><span class="n">type</span><span class="p">=</span><span class="s">&#39;rrr&#39;</span><span class="p">;</span>  <span class="c">% viewing axes for plots</span>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">proj</span><span class="p">.</span><span class="n">u</span><span class="p">=[</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">];</span><span class="w"> </span><span class="n">proj</span><span class="p">.</span><span class="n">v</span><span class="p">=[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">];</span><span class="w"> </span><span class="n">proj</span><span class="p">.</span><span class="n">type</span><span class="p">=</span><span class="s">&#39;rrr&#39;</span><span class="p">;</span><span class="w">  </span><span class="c">% viewing axes for plots</span><span class="w"></span>
 
-<span class="n">my_l</span><span class="p">=[</span><span class="o">-</span><span class="mi">2</span><span class="p">:</span><span class="mi">2</span><span class="p">];</span>  <span class="c">% loop over a set of values of L</span>
+<span class="n">my_l</span><span class="p">=[</span><span class="o">-</span><span class="mi">2</span><span class="p">:</span><span class="mi">2</span><span class="p">];</span><span class="w">  </span><span class="c">% loop over a set of values of L</span><span class="w"></span>
 
-<span class="n">for</span> <span class="s">i=1:numel(my_l)</span>
-    <span class="n">my_slice</span><span class="p">(</span><span class="nb">i</span><span class="p">)=</span><span class="n">cut_sqw</span><span class="p">(</span><span class="n">sqw_file_fake</span><span class="p">,</span><span class="n">proj</span><span class="p">,[</span><span class="o">-</span><span class="mi">3</span><span class="p">,</span><span class="mf">0.03</span><span class="p">,</span><span class="mi">3</span><span class="p">],[</span><span class="o">-</span><span class="mi">3</span><span class="p">,</span><span class="mf">0.03</span><span class="p">,</span><span class="mi">3</span><span class="p">],[</span><span class="n">my_l</span><span class="p">(</span><span class="nb">i</span><span class="p">)</span><span class="o">-</span><span class="mf">0.1</span><span class="p">,</span><span class="n">my_l</span><span class="p">(</span><span class="nb">i</span><span class="p">)</span><span class="o">+</span><span class="mf">0.1</span><span class="p">],[</span><span class="mi">80</span><span class="p">,</span><span class="mi">90</span><span class="p">],</span><span class="s">&#39;-nopix&#39;</span><span class="p">);</span>
-    <span class="n">plot</span><span class="p">(</span><span class="n">compact</span><span class="p">(</span><span class="n">my_slice</span><span class="p">(</span><span class="nb">i</span><span class="p">)));</span> <span class="n">keep_figure</span><span class="p">;</span>
-<span class="n">end</span>
+<span class="k">for</span><span class="w"> </span><span class="nb">i</span><span class="p">=</span><span class="mi">1</span><span class="p">:</span><span class="nb">numel</span><span class="p">(</span><span class="n">my_l</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="n">my_slice</span><span class="p">(</span><span class="nb">i</span><span class="p">)=</span><span class="n">cut_sqw</span><span class="p">(</span><span class="n">sqw_file_fake</span><span class="p">,</span><span class="n">proj</span><span class="p">,[</span><span class="o">-</span><span class="mi">3</span><span class="p">,</span><span class="mf">0.03</span><span class="p">,</span><span class="mi">3</span><span class="p">],[</span><span class="o">-</span><span class="mi">3</span><span class="p">,</span><span class="mf">0.03</span><span class="p">,</span><span class="mi">3</span><span class="p">],[</span><span class="n">my_l</span><span class="p">(</span><span class="nb">i</span><span class="p">)</span><span class="o">-</span><span class="mf">0.1</span><span class="p">,</span><span class="n">my_l</span><span class="p">(</span><span class="nb">i</span><span class="p">)</span><span class="o">+</span><span class="mf">0.1</span><span class="p">],[</span><span class="mi">80</span><span class="p">,</span><span class="mi">90</span><span class="p">],</span><span class="s">&#39;-nopix&#39;</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="nb">plot</span><span class="p">(</span><span class="n">compact</span><span class="p">(</span><span class="n">my_slice</span><span class="p">(</span><span class="nb">i</span><span class="p">)));</span><span class="w"> </span><span class="n">keep_figure</span><span class="p">;</span><span class="w"></span>
+<span class="k">end</span><span class="w"></span>
 </pre></div>
 </div>
 <p><strong>Sample plot of fake dataset</strong></p>
@@ -191,7 +172,7 @@
 
   <div role="contentinfo">
     <p>&#169; Copyright 2006-2021, STFC RAL.
-      <span class="lastupdated">Last updated on Nov 10, 2021, 1:51:54 AM.
+      <span class="lastupdated">Last updated on Nov 17, 2021, 6:46:26 AM.
       </span></p>
   </div>
 

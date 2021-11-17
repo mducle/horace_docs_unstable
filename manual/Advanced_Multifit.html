@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Advanced Multifit &mdash; Horace 3.6.1.e342142ef documentation</title>
+  <title>Advanced Multifit &mdash; Horace 3.6.1.ad3b5130b documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -31,7 +31,7 @@
             <img src="../_static/150px-Quintus_Horatius_Flaccus.jpg" class="logo" alt="Logo"/>
           </a>
               <div class="version">
-                3.6.1.e342142ef
+                3.6.1.ad3b5130b
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
@@ -68,26 +68,7 @@
 <li class="toctree-l2"><a class="reference internal" href="List_of_functions.html">List of functions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Input_file_formats.html">Input file formats</a></li>
 <li class="toctree-l2"><a class="reference internal" href="FAQ.html">FAQ</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Changing_object_type.html">Changing object type</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Developer_information.html">Developer information</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Fitting.html">Fitting</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Herbert.html">Herbert</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Horace_and_Libisis_installation.html">Horace and Libisis installation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Horace_command_line.html">Horace command line</a></li>
-<li class="toctree-l2"><a class="reference internal" href="New.html">New</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Read_or_write_to_disk.html">Read or write to disk</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Remote_data_analysis.html">Remote data analysis</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Reshaping_etc.html">Reshaping etc</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Run_inspector.html">Run inspector</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Script_for_correcting_sample_misalignment.html">Script for correcting sample misalignment</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Script_for_data_treatment.html">Script for data treatment</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Script_for_fitting.html">Script for fitting</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Script_for_generating_sqw_files.html">Script for generating sqw files</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Script_for_making_cuts_and_plotting.html">Script for making cuts and plotting</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Script_for_making_publication_quality_figures.html">Script for making publication quality figures</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Script_for_making_simulations.html">Script for making simulations</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Script_for_planning_an_experiment.html">Script for planning an experiment</a></li>
-<li class="toctree-l2"><a class="reference internal" href="s_new.html">S new</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Unsorted.html">Unsorted Manual Pages</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../Citing.html">Citing Horace</a></li>
@@ -128,7 +109,7 @@
 <section id="multifit-methods-requirements">
 <h2>Multifit methods requirements<a class="headerlink" href="#multifit-methods-requirements" title="Permalink to this headline"></a></h2>
 <p>In many cases, the most convenient thing to do is extract the x,y,e arrays from an object and pass those to multifit. This can be done by using a method defined on the object to extract an x,y,e triple:</p>
-<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;&gt;</span> <span class="p">[</span><span class="n">wout</span><span class="p">,</span> <span class="n">fitdata</span><span class="p">]</span> <span class="p">=</span> <span class="n">multifit</span> <span class="p">(</span><span class="n">xye</span><span class="p">(</span><span class="n">w</span><span class="p">),</span> <span class="n">func</span><span class="p">,</span> <span class="n">pin</span><span class="p">,</span><span class="c">...)</span>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="p">[</span><span class="n">wout</span><span class="p">,</span><span class="w"> </span><span class="n">fitdata</span><span class="p">]</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">multifit</span><span class="w"> </span><span class="p">(</span><span class="n">xye</span><span class="p">(</span><span class="n">w</span><span class="p">),</span><span class="w"> </span><span class="n">func</span><span class="p">,</span><span class="w"> </span><span class="n">pin</span><span class="p">,</span><span class="k">...</span><span class="c">)</span><span class="w"></span>
 </pre></div>
 </div>
 <p>where the method xye must return a structure of the form required by multifit, namely a structure with fields ‘x’,’y’ and ‘e’ ,where ‘x’ is a cell array {x1,x2,…} containing the coordinates of the points along the first, second… axes, and ‘e’ contains the standard deviations. A convenient way to do this is to use the methods sigvar_get and sigvar_getx if they have been written to allow the object itself to be passed to multifit (see below).</p>
@@ -137,7 +118,7 @@
 <section id="fit-functions">
 <h3>Fit functions<a class="headerlink" href="#fit-functions" title="Permalink to this headline"></a></h3>
 <p>The global function, and background function(s) if given, can be methods of the class or simply functions, with input argument form as described in detail in multifit help. The general format is:</p>
-<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;&gt;</span> <span class="n">wcalc</span> <span class="p">=</span> <span class="n">my_function</span> <span class="p">(</span><span class="n">w</span><span class="p">,</span><span class="n">p</span><span class="p">,</span><span class="n">c1</span><span class="p">,</span><span class="n">c2</span><span class="p">,</span><span class="c">...)</span>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">wcalc</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">my_function</span><span class="w"> </span><span class="p">(</span><span class="n">w</span><span class="p">,</span><span class="n">p</span><span class="p">,</span><span class="n">c1</span><span class="p">,</span><span class="n">c2</span><span class="p">,</span><span class="k">...</span><span class="c">)</span><span class="w"></span>
 </pre></div>
 </div>
 <p>If multifit is defined as a method of the class, then one can use the capability of nesting functions within the method to accept different fit function syntax. This is done, for example, for sqw objects when the fit functions to multifit, and equivalently multifit_func, are just a 1D/2D…4D Gaussian (according to the dimensionality of the sqw object).</p>
@@ -188,7 +169,7 @@
 
   <div role="contentinfo">
     <p>&#169; Copyright 2006-2021, STFC RAL.
-      <span class="lastupdated">Last updated on Nov 10, 2021, 1:51:54 AM.
+      <span class="lastupdated">Last updated on Nov 17, 2021, 6:46:26 AM.
       </span></p>
   </div>
 
